@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ihda.chessclock.MainActivity">
+
+    <!-- Player 1 space -->
+    <TextView
+        android:id="@+id/player1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Player 1 (White)"
+        android:textSize="30dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/player1_time"
+        android:onClick="startTimerByPlayerOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="sans-serif-light"
+        android:text="00:00"
+        android:textSize="80sp"
+        android:paddingTop="50dp"
+        android:paddingBottom="30dp" />
+
+    <!--Layout button-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/pause_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pause"
+            android:textColor="#FFFFFF"/>
+        <Button
+            android:id="@+id/reset_button"
+            android:onClick="resetTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reset"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+
+    <!-- Player 2 space -->
+    <TextView
+        android:id="@+id/player2_time"
+        android:onClick="startTimerByPlayerTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="sans-serif-light"
+        android:text="00:00"
+        android:textSize="80sp"
+        android:paddingTop="50dp"
+        android:paddingBottom="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player 2 (Black)"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="30dp" />
+</LinearLayout>
