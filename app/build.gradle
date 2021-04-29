@@ -3,12 +3,13 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
-
+    
+    def appVersionCode = Integer.valueOf(System.env.BUILD_NUMBER ?: 0)
     defaultConfig {
         applicationId "com.ihda.chessclock"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 1
+        versionCode appVersionCode
         versionName "1.0"
     }
     buildTypes {
